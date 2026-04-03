@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SYLVIE PHOTO </title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #eed5da; /* ชมพูน่ารัก */
+            --secondary: #91b7d8; /* ฟ้าสดใส */
+            --discord: #afb1ca; /* สี Discord */
+            --bg: #e4cde0; 
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: #4a4a4a;
+            overflow-x: hidden;
+        }
+
+        /* Header / Hero */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: rgb(49, 38, 38);
+            text-align: center;
+            padding: 100px 20px;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            position: relative;
+        }
+
+        .logo-text { font-size: 3.5rem; margin-bottom: 10px; font-weight: 700; }
+        .sub-text { font-size: 1.3rem; opacity: 0.95; font-weight: 300; }
+
+        .container { max-width: 1100px; margin: auto; padding: 50px 20px; }
+
+        /* Services Section */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: -50px; /* ให้การ์ดลอยทับ header นิดๆ */
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(255, 183, 197, 0.2);
+            border: 2px solid #fff;
+            transition: 0.4s;
+        }
+
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .icon { font-size: 50px; margin-bottom: 15px; display: block; }
+
+        /* Gallery */
+        .section-title { text-align: center; margin: 60px 0 30px; font-size: 2.2rem; color: #ff8fa3; }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .gallery-item {
+            aspect-ratio: 1/1;
+            background: #eee;
+            border-radius: 20px;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            overflow: hidden; /* ป้องกันรูปภาพล้นกรอบ */
+        }
+        
+        /* สไตล์สำหรับรูปภาพในแกลเลอรี */
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ให้รูปภาพขยายเต็มกรอบโดยไม่เสียสัดส่วน */
+            transition: 0.4s ease;
+        }
+        
+        .gallery-item:hover img { transform: scale(1.1); } /* เอฟเฟกต์ซูมเมื่อเอาเมาส์วาง */
+
+        /* Discord Button Section */
+        .contact-box {
+            background: #f0f7ff;
+            padding: 60px 30px;
+            border-radius: 40px;
+            text-align: center;
+            margin-top: 80px;
+            border: 3px dashed var(--secondary);
+        }
+
+        .btn-discord {
+            background-color: var(--discord);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(88, 101, 242, 0.3);
+        }
+
+        .btn-discord:hover { background-color: #4752c4; transform: scale(1.05); }
+
+        footer { text-align: center; padding: 50px; color: #bbb; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-text"> SYLVIE PHOTO </div>
+    <div class="sub-text">รับถ่ายรูป • ทำชุดแก๊ง • ออกแบบโลโก้ • ลงรีเชด </div>
+</header>
+
+<div class="container">
+    
+    <div class="grid">
+        <div class="card">
+            <span class="icon">📸</span>
+            <h3>รับถ่ายรูป Offline</h3>
+            <p>เก็บความประทับใจ มุมสวยละมุน สไตล์คิ้วท์ๆ</p>
+        </div>
+        <div class="card">
+            <span class="icon">👚</span>
+            <h3>ชุดแก๊ง/ครอบครัว</h3>
+            <p>คัดติ้งเนี้ยบ ดีไซน์เอกลักษณ์เฉพาะกลุ่ม</p>
+        </div>
+        <div class="card">
+            <span class="icon">🎨</span>
+            <h3>โลโก้ & กราฟิก</h3>
+            <p>รับทำโลโก้แก๊ง โลโก้ส่วนตัว น่ารักไม่ซ้ำใคร</p>
+        </div>
+        <div class="card">
+            <span class="icon">💻</span>
+            <h3>Windows & รีเชด</h3>
+            <p>เครื่องลื่นปรื๊ด ภาพสวยใสสไตล์ Kemal</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">☁️ ผลงานสุดคิ้วท์ของเรา ☁️</h2>
+
+ <div class="gallery-item"><img src="https://i.postimg.cc/4dQZ98yM/r-p.jpg"></div>
+     <div class="gallery-item"><img src="https://i.postimg.cc/SK9LhPN9/r-p1.jpg"></div>
+       <div class="gallery-item"><img src="https://i.postimg.cc/85170XFm/r-p3.jpg"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/G3KFdGd1/r-p4.jpg"></div>
+         <div class="gallery-item"><img src="https://i.postimg.cc/wTbDsz1Z/r-p5.jpg"></div> 
+         <div class="gallery-item"><img src="https://i.postimg.cc/TwGbXY4F/r-p6.jpg"></div> 
+
+
+           
+        <div class="gallery-item"><img src="https://i.postimg.cc/Jh9tqdR9/d-b.png"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/JnwtqBPQ/loto.png"></div>
+
+          
+       <div class="gallery-item"><img src="https://i.postimg.cc/3NhXLwKY/h-df-a.png"></div>
+       <div class="gallery-item"><img src="https://i.postimg.cc/FsDyZmwH/h-dda.png"></div>
+         <div class="gallery-item"><img src="https://i.postimg.cc/T2Q5800J/h-d-daek-paed.png"></div>
+
+    
+         <div class="gallery-item"><img src="https://i.postimg.cc/9QxzKQYg/hxd-da-khaw.png"></div>
+         <div class="gallery-item"><img src="https://i.postimg.cc/pLgyR13w/h-d-khaw-w.png"></div>
+         
+         
+       <div class="gallery-item"><img src="https://i.postimg.cc/J0PW0G0X/se-x1.png"></div>
+      <div class="gallery-item"><img src="https://i.postimg.cc/0ymPd5H6/se-x2.png"></div>
+
+         
+<div class="gallery-item"><img src="https://i.postimg.cc/dVMK1Pt9/keaa1.png"></div>
+<div class="gallery-item"><img src="https://i.postimg.cc/85X2gx01/keaa2.png"></div>
+<div class="gallery-item"><img src="https://i.postimg.cc/dtyzgHmh/keaa3.png"></div>
+ </div>
+
+    <div class="contact-box">
+        <h2>อยากมีงานน่ารักๆ แบบนี้ใช่ไหม?</h2>
+        <p>แวะมาคุยกันได้ที่เซิร์ฟเวอร์ Discord ของเราเลยจ้า แม่ค้าใจดีมาก!</p>
+        <br>
+        <a href="https://discord.gg/GhrYEYVHN" target="_blank" class="btn-discord">
+             เข้าสู่ Discord ของเรา 👻
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 SYLVIE PHOTO<br>
+    "ดูแลด้วยใจ ใส่ความน่ารักให้ทุกงาน"
+</footer>
+
+</body>
+</html>
