@@ -146,6 +146,29 @@
     .price-card:hover { border-color: #f472b6; transform: translateY(-5px); }
     .price-value { font-size: 1.5rem; font-weight: 700; color: #f472b6; margin: 10px 0; }
 
+    /* Custom Social Link Styling */
+    .social-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(5px);
+        padding: 12px 24px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        font-weight: 500;
+        color: #5d4037;
+        transition: 0.3s all cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+    .social-link:hover {
+        transform: translateY(-3px);
+        background: #fff;
+        border-color: #f472b6;
+        color: #f472b6;
+        box-shadow: 0 10px 20px rgba(244, 114, 182, 0.15);
+    }
+
     .hidden { display: none; }
     .fade-in { animation: fadeIn 0.4s ease forwards; }
     @keyframes fadeIn { 
@@ -162,6 +185,7 @@
                 <h1>SYLVIE PHOTO</h1>
                  <div class="sub-text">รับถ่ายรูป • ทำชุดแก๊ง • ออกแบบโลโก้ • ลงรีเชด </div>
             </header>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
                 <div class="main-card text-center" onclick="openGallery('offline')">
                     <div class="text-4xl mb-4">📸</div>
@@ -178,19 +202,32 @@
                     <h3>โลโก้ & กราฟิก</h3>
                     <p>รับทำโลโก้แก๊ง โลโก้ส่วนตัว น่ารักไม่ซ้ำใคร</p>
                 </div>
-                <div class="main-card text-center" onclick="openGallery('windows')">
+               <div class="main-card text-center" onclick="openGallery('windows')">
                     <div class="text-4xl mb-4">💻</div>
                     <h3>Windows & ReShade</h3>
                     <p>เครื่องลื่นปรื๊ด ภาพสวยใสสไตล์ SYLVIE PHOTO </p>
                 </div>
             </div>
 
-            <div class="flex flex-col items-center gap-4">
-                <div class="flex gap-4">
+            <div class="flex flex-col items-center gap-12">
+                <div class="flex flex-wrap justify-center gap-4">
                     <button class="btn-minimal" onclick="openGallery('colors')">🎨 โค้ดสี & Palette</button>
                     <button class="btn-minimal" onclick="openGallery('pricing')">💰 ค่าบริการ & โปรโมชั่น</button>
                 </div>
-                <a href="https://discord.gg/UCMH6GMa" target="_blank" class="mt-8 text-sm text-[#5d4037] hover:text-[#f472b6] font-medium transition underline underline-offset-8">Contact via Discord</a>
+
+                <div class="flex flex-col items-center gap-6 pb-20">
+                    <p class="text-sm font-medium text-[#5d4037] opacity-60 tracking-widest uppercase">Follow us at the link below</p>
+                    <div class="flex flex-wrap justify-center gap-5">
+                        <a href="https://www.facebook.com/Sylvie.channn" target="_blank" class="social-link group">
+                            <span class="text-xl group-hover:scale-125 transition-transform duration-300">🔵</span>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://discord.gg/UCMH6GMa" target="_blank" class="social-link group">
+                            <span class="text-xl group-hover:scale-125 transition-transform duration-300">💬</span>
+                            <span>Discord</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -306,20 +343,18 @@
                         name: 'อัตราค่าบริการ', 
                         types: { 
                             '📷 ค่าถ่ายรูป': [
-                                {n:'Single (ถ่ายเดี่ยว)', p:'เริ่มต้น 50.-', d:'ปรับโทนสีผิว แสง เงา ละมุน'},
-                                {n:'Couple (ถ่ายคู่)', p:'เริ่มต้น 90.-', d:'คู่รัก เพื่อนซี้ มุมสวยเป็นธรรมชาติ'},
-                                {n:'Suit-Hood', p:'เริ่มต้น 120.-', d:'เน้นรายละเอียดชุดและเครื่องประดับ'}
+                                {n:'Single (รูปเดี่ยว)', p:'เริ่มต้น 50.-', d:'ปรับโทนสีผิว แสง เงา ละมุน'},
+                                {n:'Couple (รู)คู่)', p:'เริ่มต้น 70.-', d:'คู่รัก เพื่อนซี้ มุมสวยเป็นธรรมชาติ'},
+                                {n:'3 คน', p:'เริ่มต้น 130.-', d:'คู่หูสุดก๊วน'}
                             ], 
                             '👚 ค่าชุด & โลโก้': [
-                                {n:'ชุดแก๊ง/ครอบครัว', p:'เริ่มต้น 250.-', d:'ดีไซน์เฉพาะกลุ่ม ไม่ซ้ำใคร'},
-                                {n:'LOGO Design', p:'เริ่มต้น 150.-', d:'โลโก้แก๊ง หรือส่วนตัว สไตล์คิ้วท์ๆ'}
+                                {n:'ชุดแก๊ง/ครอบครัว ชุดล่ะ', p:'เริ่มต้น 130.-', d:'ดีไซน์เฉพาะกลุ่ม ไม่ซ้ำใคร'},
+                                {n:'ชุดครบเซ็ต 5 ตัว', p:'เริ่มต้น 650.-', d:'สวยยกเซ็ต ได้ทั้งผู้ชายและผู้หญิง'},
+                                {n:'LOGO ', p:'เริ่มต้น 80.- 200.-', d:'โลโก้แก๊ง หรือส่วนตัว สไตล์คิ้วท์ๆ'}
                             ],
-                            '💻 Windows & รีเชด': [
-                               {n:'Setup Windows', p:'200.-', d:'เคลียร์ไฟล์ขยะ ตั้งค่าเครื่องให้ลื่น'},
-                               {n:'ReShade (รีเชด)', p:'100.-', d:'ภาพสวยใสสไตล์ Kemal เล่นลื่นไม่หน่วง'}
-                                 ],
                             '🎁 โปรโมชั่น': [
-                                {n:'โปรโมชั่นเปิดร้าน', p:'ลด 10%', d:'สำหรับลูกค้าที่สั่งทำชุดแก๊ง 10 ชุดขึ้นไป'},
+                                {n:'โปรโมชั่นเปิดร้าน', p:'โปรโมชั่นอัพทุกเดือนแล้วแต่แม่ค้าจะจัด'},  
+                                {n:'โปรโมชั่นเปิดร้าน', p:'ติดตามที่ดิส หรือ เฟสได้เลยจ้า'},
                                 {n:'แพ็กเกจสุดคุ้ม', p:'350.-', d:'ถ่ายรูป Couple + ออกแบบโลโก้แก๊ง'}
                             ]
                         } 
@@ -337,7 +372,7 @@
             const typeMenuBox = document.getElementById('type-menu-container');
             
             subMenuBox.innerHTML = '';
-            typeMenuBox.className = "flex flex-wrap justify-center gap-2 mb-10"; 
+            typeMenuBox.className = "flex flex-wrap justify-center gap-3 mb-8"; 
 
             if (catId === 'offline' || catId === 'windows') {
                 subMenuBox.style.display = 'flex';
@@ -407,16 +442,26 @@
             } else if (catId === 'pricing') {
                 const prices = allData[catId].subs[subId].types[typeKey];
                 let grid = `<div class="grid grid-cols-1 md:grid-cols-3 gap-6 fade-in">`;
+                
+                const isPromo = typeKey.includes('โปรโมชั่น');
+                
                 prices.forEach(item => {
-                    grid += `<div class="price-card shadow-sm"><h3>${item.n}</h3><div class="price-value">${item.p}</div><p>${item.d}</p></div>`;
+                    const textColor = isPromo ? 'style="color: #5d4037 !important;"' : '';
+                    const valueColor = isPromo ? 'style="color: #5d4037 !important;"' : '';
+                    const descColor = isPromo ? 'style="color: #5d4037 !important;"' : '';
+
+                    grid += `
+                        <div class="price-card shadow-sm">
+                            <h3 ${textColor}>${item.n}</h3>
+                            <div class="price-value" ${valueColor}>${item.p}</div>
+                            <p ${descColor}>${item.d || ''}</p>
+                        </div>`;
                 });
                 contentBox.innerHTML += grid + `</div>`;
             } else {
-                // แก้ไขส่วนแสดงผลรูปภาพตรงนี้
                 let grid = `<div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in">`;
                 const photos = allData[catId].subs[subId].types[typeKey];
                 photos.forEach(src => {
-                    // ลบ aspect-ratio และ object-cover ออกเพื่อให้เห็นรูปเต็มใบ
                     grid += `
                         <div class="photo-card shadow-sm border-0 bg-transparent">
                             <img src="${src}" class="w-full h-auto rounded-3xl block shadow-md">
