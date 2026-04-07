@@ -206,15 +206,45 @@
     </div>
 
     <script>
-        const allData = {
-            'offline': {
-                title: '☁️ ผลงานสุดคิ้วท์ของเรา ☁️',
-                subs: {
-                    'mood': { name: '🧠 MOOD TONE', types: { 'Single (ถ่ายเดี่ยว)': [], 'Couple (ถ่ายคู่)': [], 'Suit-Hood': [] }},
-                    'dark': { name: '🌑 DARK TONE', types: { 'Single (ถ่ายเดี่ยว)': [], 'Couple (ถ่ายคู่)': [], 'Suit-Hood': [] }},
-                    'cute': { name: '🌸 CUTE TONE', types: { 'Single (ถ่ายเดี่ยว)': [], 'Couple (ถ่ายคู่)': [], 'Suit-Hood': [] }}
+       const allData = {
+        'offline': {
+            title: '☁️ ผลงานสุดคิ้วท์ของเรา ☁️',
+            subs: {
+                'mood': { 
+                    name: '🧠 MOOD TONE', 
+                    types: { 
+                        'Single (ถ่ายเดี่ยว)': [], 
+                        'Couple (ถ่ายคู่)': [], 
+                        'Suit-Hood': [] 
+                    }
+                },
+                'dark': { 
+                    name: '🌑 DARK TONE', 
+                    types: { 
+                        'Single (ถ่ายเดี่ยว)': [], 
+                        'Couple (ถ่ายคู่)': [], 
+                        'Suit-Hood': [] 
+                    }
+                },
+                'cute': { 
+                    name: '🌸 CUTE TONE', 
+                    types: { 
+                        'Single (ถ่ายเดี่ยว)': [], 
+                        'Couple (ถ่ายคู่)': ['https://i.postimg.cc/GhCcG7dR/r-pkh-kh-w.png'], 
+                        'Suit-Hood': [] 
+                    }
+                },
+                'zone': { 
+                    name: '💎 ZONE TONE', 
+                    types: { 
+                        '🎨 semi-real': [], 
+                        '🔥 street': [], 
+                        '📷 profile': [],  
+                        '🥳 festival': ['https://i.postimg.cc/wTmmTbFB/r-p-theskal.png'],
+                    }
                 }
-            },
+            }
+        },
             'clothing': {
                 title: '☁️ ผลงานสุดคิ้วท์ของเรา ☁️',
                 subs: {
@@ -307,8 +337,6 @@
             const typeMenuBox = document.getElementById('type-menu-container');
             
             subMenuBox.innerHTML = '';
-            
-            // ล้าง Class ทุกครั้งที่เปิดหน้าใหม่ (กำจัดเส้นขาวถาวร)
             typeMenuBox.className = "flex flex-wrap justify-center gap-2 mb-10"; 
 
             if (catId === 'offline' || catId === 'windows') {
@@ -336,8 +364,6 @@
         function renderTypeMenu(catId, subId) {
             const typeMenuBox = document.getElementById('type-menu-container');
             typeMenuBox.innerHTML = '';
-            
-            // ย้ำว่า Class ของเมนูประเภทต้องไม่มี border-t
             typeMenuBox.className = "flex flex-wrap justify-center gap-2 mb-10"; 
 
             const typeKeys = Object.keys(allData[catId].subs[subId].types);
@@ -386,10 +412,15 @@
                 });
                 contentBox.innerHTML += grid + `</div>`;
             } else {
-                let grid = `<div class="grid grid-cols-1 md:grid-cols-2 gap-6 fade-in">`;
+                // แก้ไขส่วนแสดงผลรูปภาพตรงนี้
+                let grid = `<div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in">`;
                 const photos = allData[catId].subs[subId].types[typeKey];
                 photos.forEach(src => {
-                    grid += `<div class="photo-card shadow-sm" style="aspect-ratio: 16/9;"><img src="${src}" class="w-full h-full object-cover"></div>`;
+                    // ลบ aspect-ratio และ object-cover ออกเพื่อให้เห็นรูปเต็มใบ
+                    grid += `
+                        <div class="photo-card shadow-sm border-0 bg-transparent">
+                            <img src="${src}" class="w-full h-auto rounded-3xl block shadow-md">
+                        </div>`;
                 });
                 contentBox.innerHTML += grid + `</div>`;
             }
