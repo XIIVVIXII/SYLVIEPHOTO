@@ -359,41 +359,340 @@
                             {n:'Yellow-Green', c:'#BFFF00'}, {n:'Blue-Green', c:'#00FFBF'}, {n:'Blue-Violet', c:'#4000FF'}, {n:'Red-Violet', c:'#BF00FF'}
                         ],
                         '👕 สูตรผสมสีชุด (2 สี)': [
-                            { n: 'Cotton Pink', colors: [{ n: 'ชมพูพาสเทล', c: '#FBCFE8' }, { n: 'ม่วงลาเวนเดอร์', c: '#DDD6FE' }] },
-                            { n: 'Peach Sunset', colors: [{ n: 'พีชอ่อน', c: '#FFD6A5' }, { n: 'ส้มคอรัล', c: '#FF8FA3' }] },
-                            { n: 'Mint Dream', colors: [{ n: 'เขียวมิ้นท์', c: '#AAF0D1' }, { n: 'ฟ้าอ่อน', c: '#BFEFFF' }] },
-                            { n: 'Purple Candy', colors: [{ n: 'ม่วงพาสเทล', c: '#CBAACB' }, { n: 'ชมพูอ่อน', c: '#FFB7C5' }] },
-                            { n: 'Ocean Breeze', colors: [{ n: 'ฟ้าสกาย', c: '#87CEFA' }, { n: 'น้ำเงินกรม', c: '#1E3A8A' }] },
-                            { n: 'Forest Calm', colors: [{ n: 'เขียวเซจ', c: '#C1D7AE' }, { n: 'เขียวเข้ม', c: '#013220' }] },
-                            { n: 'Golden Olive', colors: [{ n: 'เหลืองวานิลลา', c: '#F3E5AB' }, { n: 'เขียวโอลีฟ', c: '#556B2F' }] },
-                            { n: 'Berry Night', colors: [{ n: 'ม่วงองุ่น', c: '#A78BFA' }, { n: 'ม่วงเข้ม', c: '#3B0A45' }] },
-                            { n: 'Rose Wine', colors: [{ n: 'ชมพูกุหลาบ', c: '#FFC0CB' }, { n: 'ไวน์แดง', c: '#722F37' }] },
-                            { n: 'Sky Ice', colors: [{ n: 'ฟ้าเบบี้', c: '#BFEFFF' }, { n: 'เทาอมฟ้า', c: '#94A3B8' }] },
-                            { n: 'Caramel Milk', colors: [{ n: 'คาราเมลอ่อน', c: '#E6C7A1' }, { n: 'น้ำตาลนม', c: '#C8A27A' }] },
-                            { n: 'Dark Neon', colors: [{ n: 'น้ำเงินเข้ม', c: '#0A1A2F' }, { n: 'ฟ้านีออน', c: '#38BDF8' }] },
-                            { n: 'Pink Lilac Dream', colors: [{ n: 'ชมพูอ่อน', c: '#FFB7C5' }, { n: 'ม่วงไลแลค', c: '#C4B5FD' }] },
-                            { n: 'Soft Rose Peach', colors: [{ n: 'ชมพูกุหลาบ', c: '#FFC0CB' }, { n: 'พีช', c: '#FFE5B4' }] },
-                            { n: 'Fresh Breeze', colors: [{ n: 'เขียวมิ้นท์อ่อน', c: '#B4F8C8' }, { n: 'ฟ้าเบบี้', c: '#BFEFFF' }] },
-                            { n: 'Ocean Mint', colors: [{ n: 'มิ้นท์เข้ม', c: '#5EEAD4' }, { n: 'ฟ้าคราม', c: '#38BDF8' }] },
-                            { n: 'Cool Aqua', colors: [{ n: 'เขียวอมฟ้า', c: '#99F6E4' }, { n: 'ฟ้าน้ำทะเล', c: '#22D3EE' }] },
-                            { n: 'Nature Green', colors: [{ n: 'เขียวอ่อน', c: '#C7E9B0' }, { n: 'เขียวเข้ม', c: '#013220' }] },
-                            { n: 'Forest Light', colors: [{ n: 'เขียวเซจ', c: '#C1D7AE' }, { n: 'เขียวป่า', c: '#0B3D0B' }] },
-                            { n: 'Leaf Shadow', colors: [{ n: 'เขียวพาสเทล', c: '#B4F8C8' }, { n: 'เขียวเข้มหม่น', c: '#1B4D3E' }] },
-                            { n: 'Olive Deep', colors: [{ n: 'เขียวโอลีฟอ่อน', c: '#CDE77F' }, { n: 'โอลีฟเข้ม', c: '#556B2F' }] },
-                            { n: 'Cyber Pink', colors: [{ n: 'ดำสนิท', c: '#0D0D0D' }, { n: 'ชมพูนีออน', c: '#FF4D6D' }] },
-                            { n: 'Dark Purple Glow', colors: [{ n: 'ม่วงเข้ม', c: '#2E0854' }, { n: 'ม่วงนีออน', c: '#A78BFA' }] },
-                            { n: 'Electric Green', colors: [{ n: 'เทาดำ', c: '#1F1F1F' }, { n: 'เขียวนีออน', c: '#4ADE80' }] }
+                            /* 🎀 โทนพาสเทล */
+{n:'Cotton Pink', colors:[
+{n:'ชมพูพาสเทล', c:'#FBCFE8'},
+{n:'ม่วงลาเวนเดอร์', c:'#DDD6FE'}
+]},
+
+{n:'Peach Sunset', colors:[
+{n:'พีชอ่อน', c:'#FFD6A5'},
+{n:'ส้มคอรัล', c:'#FF8FA3'}
+]},
+
+{n:'Mint Dream', colors:[
+{n:'เขียวมิ้นท์', c:'#AAF0D1'},
+{n:'ฟ้าอ่อน', c:'#BFEFFF'}
+]},
+
+{n:'Purple Candy', colors:[
+{n:'ม่วงพาสเทล', c:'#CBAACB'},
+{n:'ชมพูอ่อน', c:'#FFB7C5'}
+]},
+
+{n:'Ocean Breeze', colors:[
+{n:'ฟ้าสกาย', c:'#87CEFA'},
+{n:'น้ำเงินกรม', c:'#1E3A8A'}
+]},
+
+{n:'Forest Calm', colors:[
+{n:'เขียวเซจ', c:'#C1D7AE'},
+{n:'เขียวเข้ม', c:'#013220'}
+]},
+
+{n:'Golden Olive', colors:[
+{n:'เหลืองวานิลลา', c:'#F3E5AB'},
+{n:'เขียวโอลีฟ', c:'#556B2F'}
+]},
+
+{n:'Berry Night', colors:[
+{n:'ม่วงองุ่น', c:'#A78BFA'},
+{n:'ม่วงเข้ม', c:'#3B0A45'}
+]},
+
+{n:'Rose Wine', colors:[
+{n:'ชมพูกุหลาบ', c:'#FFC0CB'},
+{n:'ไวน์แดง', c:'#722F37'}
+]},
+
+{n:'Sky Ice', colors:[
+{n:'ฟ้าเบบี้', c:'#BFEFFF'},
+{n:'เทาอมฟ้า', c:'#94A3B8'}
+]},
+
+{n:'Caramel Milk', colors:[
+{n:'คาราเมลอ่อน', c:'#E6C7A1'},
+{n:'น้ำตาลนม', c:'#C8A27A'}
+]},
+
+{n:'Dark Neon', colors:[
+{n:'น้ำเงินเข้ม', c:'#0A1A2F'},
+{n:'ฟ้านีออน', c:'#38BDF8'}
+]},
+
+/* 🌈 เพิ่ม */
+{n:'Pink Lilac Dream', colors:[
+{n:'ชมพูอ่อน', c:'#FFB7C5'},
+{n:'ม่วงไลแลค', c:'#C4B5FD'}
+]},
+
+{n:'Soft Rose Peach', colors:[
+{n:'ชมพูกุหลาบ', c:'#FFC0CB'},
+{n:'พีช', c:'#FFE5B4'}
+]},
+
+{n:'Fresh Breeze', colors:[
+{n:'เขียวมิ้นท์อ่อน', c:'#B4F8C8'},
+{n:'ฟ้าเบบี้', c:'#BFEFFF'}
+]},
+
+{n:'Ocean Mint', colors:[
+{n:'มิ้นท์เข้ม', c:'#5EEAD4'},
+{n:'ฟ้าคราม', c:'#38BDF8'}
+]},
+
+{n:'Cool Aqua', colors:[
+{n:'เขียวอมฟ้า', c:'#99F6E4'},
+{n:'ฟ้าน้ำทะเล', c:'#22D3EE'}
+]},
+
+{n:'Nature Green', colors:[
+{n:'เขียวอ่อน', c:'#C7E9B0'},
+{n:'เขียวเข้ม', c:'#013220'}
+]},
+
+{n:'Forest Light', colors:[
+{n:'เขียวเซจ', c:'#C1D7AE'},
+{n:'เขียวป่า', c:'#0B3D0B'}
+]},
+
+{n:'Leaf Shadow', colors:[
+{n:'เขียวพาสเทล', c:'#B4F8C8'},
+{n:'เขียวเข้มหม่น', c:'#1B4D3E'}
+]},
+
+{n:'Olive Deep', colors:[
+{n:'เขียวโอลีฟอ่อน', c:'#CDE77F'},
+{n:'โอลีฟเข้ม', c:'#556B2F'}
+]},
+
+/* 🔥 Top 10 (คัดมาแล้ว ไม่ซ้ำ) */
+{n:'Blood Black', colors:[
+{n:'ดำสนิท', c:'#0D0D0D'},
+{n:'แดงเลือด', c:'#7F1D1D'}
+]},
+
+{n:'Gold Royal', colors:[
+{n:'ดำ', c:'#0D0D0D'},
+{n:'ทอง', c:'#D4AF37'}
+]},
+
+{n:'Neon Blue Dark', colors:[
+{n:'ดำ', c:'#0D0D0D'},
+{n:'ฟ้านีออน', c:'#38BDF8'}
+]},
+
+{n:'Toxic Green Dark', colors:[
+{n:'ดำ', c:'#0D0D0D'},
+{n:'เขียวนีออน', c:'#39FF14'}
+]},
+
+{n:'Purple Luxury', colors:[
+{n:'ม่วงเข้ม', c:'#2E0854'},
+{n:'ม่วงพาสเทล', c:'#CBAACB'}
+]},
+
+{n:'Cyber Pink', colors:[
+{n:'ดำสนิท', c:'#0D0D0D'},
+{n:'ชมพูนีออน', c:'#FF4D6D'}
+]},
+/* 🔥 โหด แปลก ไม่ซ้ำ */
+{n:'Crimson Night', colors:[
+{n:'แดงเข้ม', c:'#5B0F1A'},
+{n:'ดำสนิท', c:'#0D0D0D'}
+]},
+
+{n:'Steel Blue', colors:[
+{n:'น้ำเงินเหล็ก', c:'#1E40AF'},
+{n:'เทาเหล็ก', c:'#475569'}
+]},
+
+{n:'Obsidian Glow', colors:[
+{n:'ดำด้าน', c:'#0A0A0A'},
+{n:'ม่วงเรืองแสง', c:'#9333EA'}
+]},
+
+/* 💎 หรู แปลก */
+{n:'Champagne Gold', colors:[
+{n:'ทองแชมเปญ', c:'#F7E7CE'},
+{n:'ทองเข้ม', c:'#C9A227'}
+]},
+
+{n:'Royal Navy', colors:[
+{n:'น้ำเงินราชวงศ์', c:'#1E3A8A'},
+{n:'ทอง', c:'#D4AF37'}
+]},
+
+{n:'Black Rose', colors:[
+{n:'ดำ', c:'#0D0D0D'},
+{n:'ชมพูเข้ม', c:'#BE185D'}
+]},
+
+/* 🌿 ธรรมชาติ แต่แปลก */
+{n:'Moss Earth', colors:[
+{n:'เขียวมอส', c:'#4B5320'},
+{n:'น้ำตาลดิน', c:'#6B4226'}
+]},
+
+{n:'Jungle Deep', colors:[
+{n:'เขียวป่าลึก', c:'#022C22'},
+{n:'เขียวสด', c:'#16A34A'}
+]},
+
+/* ⚡ นีออนจัด */
+{n:'Neon Orange Dark', colors:[
+{n:'ดำ', c:'#0D0D0D'},
+{n:'ส้มนีออน', c:'#FF5F1F'}
+]},
+
+{n:'Electric Yellow', colors:[
+{n:'ดำ', c:'#0D0D0D'},
+{n:'เหลืองนีออน', c:'#FACC15'}
+]},
+
+{n:'Cyber Cyan', colors:[
+{n:'ดำ', c:'#0D0D0D'},
+{n:'ฟ้าไซเบอร์', c:'#00FFFF' }] }
                         ],
                         '👕 สูตรผสมสีชุด (3 สี)': [
-                             { n: 'Cotton Pink', colors: [{ n: 'ชมพูพาสเทล', c: '#FBCFE8' }, { n: 'ม่วงลาเวนเดอร์', c: '#DDD6FE' }, { n: 'ตัด', c: '#FBCFE8' }] },
-                            { n: 'Peach Sunset', colors: [{ n: 'พีชอ่อน', c: '#FFD6A5' }, { n: 'ส้มคอรัล', c: '#FF8FA3' }, { n: 'ตัด', c: '#FFD6A5' }] },
-                            { n: 'Mint Dream', colors: [{ n: 'เขียวมิ้นท์', c: '#AAF0D1' }, { n: 'ฟ้าอ่อน', c: '#BFEFFF' }, { n: 'ตัด', c: '#AAF0D1' }] },
-                            { n: 'Purple Candy', colors: [{ n: 'ม่วงพาสเทล', c: '#CBAACB' }, { n: 'ชมพูอ่อน', c: '#FFB7C5' }, { n: 'ตัด', c: '#CBAACB' }] },
-                            { n: 'Ocean Breeze', colors: [{ n: 'ฟ้าสกาย', c: '#87CEFA' }, { n: 'น้ำเงินกรม', c: '#1E3A8A' }, { n: 'ตัด', c: '#87CEFA' }] },
-                            { n: 'Forest Calm', colors: [{ n: 'เขียวเซจ', c: '#C1D7AE' }, { n: 'เขียวเข้ม', c: '#013220' }, { n: 'ตัด', c: '#C1D7AE' }] },
-                            { n: 'Pastel Dream', colors: [{ n: 'หลัก ชมพูพาสเทล', c: '#FBCFE8' }, { n: 'รอง ม่วงลาเวนเดอร์', c: '#DDD6FE' }, { n: 'ตัด ม่วงเข้ม', c: '#7C3AED' }] },
-                            { n: 'Peach Dream', colors: [{ n: 'หลัก พีชอ่อน', c: '#FFD6A5' }, { n: 'รอง ชมพูพีช', c: '#FF8FA3' }, { n: 'ตัด ส้มเข้ม', c: '#FB5607' }] },
-                            { n: 'Ocean Fresh', colors: [{ n: 'หลัก ฟ้าสกาย', c: '#87CEFA' }, { n: 'รอง มิ้นท์', c: '#AAF0D1' }, { n: 'ตัด น้ำเงินกรม', c: '#1E3A8A' }] }
+                           /* 🎀 หวาน */
+{n:'Sweet Candy', colors:[
+{n:'หลัก ชมพูพาสเทล', c:'#FBCFE8'},
+{n:'รอง ม่วงลาเวนเดอร์', c:'#DDD6FE'},
+{n:'ตัด ม่วงเข้ม', c:'#7C3AED'}
+]},
+
+{n:'Peach Dream', colors:[
+{n:'หลัก พีชอ่อน', c:'#FFD6A5'},
+{n:'รอง ชมพูพีช', c:'#FF8FA3'},
+{n:'ตัด ส้มเข้ม', c:'#FB5607'}
+]},
+
+{n:'Rose Soft', colors:[
+{n:'หลัก ชมพูกุหลาบ', c:'#FFC0CB'},
+{n:'รอง พีช', c:'#FFE5B4'},
+{n:'ตัด แดงไวน์', c:'#9D174D'}
+]},
+
+/* 🌊 สดชื่น */
+{n:'Ocean Fresh', colors:[
+{n:'หลัก ฟ้าสกาย', c:'#87CEFA'},
+{n:'รอง มิ้นท์', c:'#AAF0D1'},
+{n:'ตัด น้ำเงินกรม', c:'#1E3A8A'}
+]},
+
+{n:'Aqua Breeze', colors:[
+{n:'หลัก ฟ้าอ่อน', c:'#BFEFFF'},
+{n:'รอง เขียวมิ้นท์', c:'#B4F8C8'},
+{n:'ตัด ฟ้าคราม', c:'#0284C7'}
+]},
+
+{n:'Cool Wave', colors:[
+{n:'หลัก ฟ้าน้ำทะเล', c:'#22D3EE'},
+{n:'รอง เขียวอมฟ้า', c:'#99F6E4'},
+{n:'ตัด น้ำเงินเข้ม', c:'#0A1A2F'}
+]},
+
+/* 🌿 ธรรมชาติ */
+{n:'Nature Balance', colors:[
+{n:'หลัก เขียวอ่อน', c:'#C7E9B0'},
+{n:'รอง เขียวเซจ', c:'#C1D7AE'},
+{n:'ตัด เขียวเข้ม', c:'#013220'}
+]},
+
+{n:'Forest Deep', colors:[
+{n:'หลัก เขียวพาสเทล', c:'#B4F8C8'},
+{n:'รอง เขียวป่า', c:'#0B3D0B'},
+{n:'ตัด น้ำตาลเข้ม', c:'#3B2F2F'}
+]},
+
+{n:'Olive Earth', colors:[
+{n:'หลัก เขียวโอลีฟอ่อน', c:'#CDE77F'},
+{n:'รอง เหลืองวานิลลา', c:'#F3E5AB'},
+{n:'ตัด โอลีฟเข้ม', c:'#556B2F'}
+]},
+
+/* 🌑 เท่ */
+{n:'Neon Night', colors:[
+{n:'หลัก ดำ', c:'#0D0D0D'},
+{n:'รอง น้ำเงินเข้ม', c:'#0A1A2F'},
+{n:'ตัด ฟ้านีออน', c:'#38BDF8'}
+]},
+
+{n:'Cyber Pink', colors:[
+{n:'หลัก เทาดำ', c:'#1F1F1F'},
+{n:'รอง ดำสนิท', c:'#0D0D0D'},
+{n:'ตัด ชมพูนีออน', c:'#FF4D6D'}
+]},
+
+{n:'Electric Purple', colors:[
+{n:'หลัก ม่วงเข้ม', c:'#2E0854'},
+{n:'รอง ม่วงพาสเทล', c:'#CBAACB'},
+{n:'ตัด ม่วงนีออน', c:'#A78BFA'}
+]},
+
+{n:'Green Neon Tech', colors:[
+{n:'หลัก ดำ', c:'#0D0D0D'},
+{n:'รอง เทาเข้ม', c:'#1F1F1F'},
+{n:'ตัด เขียวนีออน', c:'#4ADE80'}
+]},
+
+/* 🔥 มาเฟีย / โหด */
+{n:'Blood Mafia', colors:[
+{n:'หลัก ดำสนิท', c:'#0D0D0D'},
+{n:'รอง แดงเลือด', c:'#7F1D1D'},
+{n:'ตัด แดงสด', c:'#EF4444'}
+]},
+
+{n:'Shadow Empire', colors:[
+{n:'หลัก ดำ', c:'#0D0D0D'},
+{n:'รอง เทาเข้ม', c:'#1F2937'},
+{n:'ตัด ม่วงเข้ม', c:'#6D28D9'}
+]},
+
+{n:'Night Reaper', colors:[
+{n:'หลัก น้ำเงินเข้ม', c:'#020617'},
+{n:'รอง ดำ', c:'#0D0D0D'},
+{n:'ตัด ฟ้านีออน', c:'#38BDF8'}
+]},
+
+/* 💎 หรู */
+{n:'Royal Gold', colors:[
+{n:'หลัก ดำ', c:'#0D0D0D'},
+{n:'รอง ทอง', c:'#D4AF37'},
+{n:'ตัด เหลืองทอง', c:'#FFD700'}
+]},
+
+{n:'Diamond Ice', colors:[
+{n:'หลัก เทาเข้ม', c:'#1F1F1F'},
+{n:'รอง ฟ้าอ่อน', c:'#BFEFFF'},
+{n:'ตัด ฟ้าน้ำแข็ง', c:'#38BDF8'}
+]},
+
+/* 🌿 เพิ่มจากแก๊ง (ไม่ซ้ำ) */
+{n:'Forest Family', colors:[
+{n:'หลัก เขียวเข้ม', c:'#013220'},
+{n:'รอง เขียวอ่อน', c:'#C7E9B0'},
+{n:'ตัด เหลืองนวล', c:'#FDE68A'}
+]},
+
+{n:'Olive Crew', colors:[
+{n:'หลัก โอลีฟเข้ม', c:'#556B2F'},
+{n:'รอง เขียวอ่อน', c:'#CDE77F'},
+{n:'ตัด น้ำตาล', c:'#8B5E3C'}
+]},
+
+/* ⚡ Cyber เพิ่ม */
+{n:'Cyber Neon', colors:[
+{n:'หลัก ดำ', c:'#0D0D0D'},
+{n:'รอง เทาเข้ม', c:'#1F1F1F'},
+{n:'ตัด ฟ้านีออน', c:'#00E5FF'}
+]},
+
+{n:'Toxic Neon', colors:[
+{n:'หลัก ดำ', c:'#0D0D0D'},
+{n:'รอง เขียวเข้ม', c:'#052E16'},
+{n:'ตัด เขียวนีออน', c:'#39FF14'}] }
                         ]
                     }
                 }
